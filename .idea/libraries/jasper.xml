@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="jasper">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/fontawesomefx-8.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jfoenix-8.0.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.25.jar!/" />
+      <root url="file://$PROJECT_DIR$/lib/jasper" />
+      <root url="file://$PROJECT_DIR$/lib/mail" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/jasper" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/mail" recursive="false" />
+  </library>
+</component>
