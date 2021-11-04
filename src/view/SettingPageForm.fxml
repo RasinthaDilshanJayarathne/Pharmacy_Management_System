@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SettingPageFormController">
+   <children>
+      <AnchorPane prefHeight="700.0" prefWidth="237.0" styleClass="loginBackground" stylesheets="@../style/Agent_Form.css" />
+      <AnchorPane layoutX="237.0" prefHeight="82.0" prefWidth="663.0" styleClass="loginBackground" stylesheets="@../style/Medicine_Form.css">
+         <children>
+            <Label alignment="CENTER" layoutX="-1.0" layoutY="19.0" prefHeight="36.0" prefWidth="663.0" text="BILL" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua Bold Italic" size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton layoutY="146.0" onAction="#Medicine_On_Action" prefHeight="52.0" prefWidth="237.0" text="MEDICINE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutY="198.0" onAction="#Agents_On_Action" prefHeight="52.0" prefWidth="237.0" text="AGENTS" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutY="250.0" onAction="#Company_On_Action" prefHeight="52.0" prefWidth="237.0" text="COMPANY" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
@@ -12,7 +13,24 @@
 
 <AnchorPane fx:id="root" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MedicinePaheFormController">
    <children>
-      <AnchorPane prefHeight="700.0" prefWidth="237.0" styleClass="loginBackground" stylesheets="@../style/Medicine_Form.css" />
+      <AnchorPane prefHeight="700.0" prefWidth="237.0" styleClass="loginBackground" stylesheets="@../style/Medicine_Form.css">
+         <children>
+            <JFXButton layoutY="136.0" onAction="#Company_On_Action" prefHeight="52.0" prefWidth="237.0" text="COMPANY" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutY="188.0" onAction="#Agents_On_Action" prefHeight="52.0" prefWidth="237.0" text="AGENTS" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutY="240.0" onAction="#Setting_On_Action" prefHeight="52.0" prefWidth="237.0" text="SETTING" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
       <Label layoutX="252.0" layoutY="114.0" text="Id ">
          <font>
             <Font name="System Bold" size="18.0" />
