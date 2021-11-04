@@ -5,11 +5,9 @@ USE Pharmacy;
 
 DROP TABLE IF EXISTS Users;
 CREATE TABLE IF NOT EXISTS Users(
-    uId VARCHAR (15),
     userName VARCHAR(45) NOT NULL DEFAULT 'Unknown',
     password VARCHAR(30) NOT NULL DEFAULT 'Unknown',
-    possision VARCHAR (20),
-    CONSTRAINT PRIMARY KEY (uId)
+    CONSTRAINT PRIMARY KEY (userName)
     );
 SHOW TABLES ;
 DESCRIBE Users;
