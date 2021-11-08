@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -61,5 +62,9 @@ public class CompanyPageFormController {
         Parent load = FXMLLoader.load(resource);
         Stage window = (Stage) root.getScene().getWindow();
         window.setScene(new Scene(load));
+    }
+
+    public void textFields_Key_Released(KeyEvent keyEvent) {
+
     }
 }

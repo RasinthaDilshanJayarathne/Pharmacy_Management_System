@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -28,6 +29,8 @@ public class AgentFormPageController {
     public TableColumn colContact;
     public TableColumn colAge;
     public TableColumn colGender;
+    public TextField txtAge;
+    public TextField txtContact;
 
     public void Clear_On_Action(ActionEvent actionEvent) {
     }
@@ -60,5 +63,9 @@ public class AgentFormPageController {
         Parent load = FXMLLoader.load(resource);
         Stage window = (Stage) root.getScene().getWindow();
         window.setScene(new Scene(load));
+    }
+
+    public void textFields_Key_Released(KeyEvent keyEvent) {
+
     }
 }
