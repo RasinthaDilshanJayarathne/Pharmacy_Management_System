@@ -31,10 +31,7 @@ CREATE TABLE IF NOT EXISTS Agent(
     Aid VARCHAR(15),
     name VARCHAR(45) NOT NULL DEFAULT 'Unknown',
     age INT (5),
-    address TEXT,
-    city VARCHAR (15),
     contact VARCHAR (15),
-    password VARCHAR (20),
     gender VARCHAR (10),
     CONSTRAINT PRIMARY KEY (Aid)
     );
