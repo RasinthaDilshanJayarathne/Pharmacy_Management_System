@@ -42,24 +42,6 @@ public class AgentController {
         }
     }
 
-    public static List<Agent> searchAgent(String value) throws SQLException, ClassNotFoundException {
-        Connection con = DbConnection.getInstance().getConnection();
-        PreparedStatement pstm = con.prepareStatement("SELECT * FROM Agent WHERE Aid LIKE '%"+value+"%' or bloodGroup LIKE '%"+value+"%'");
-        ResultSet rst = pstm.executeQuery();
-
-        List<Agent> agent=new ArrayList<>();
-        while (rst.next()) {
-            agent.add(new Agent(
-                    rst.getString(1),
-                    rst.getString(2),
-                    rst.getInt(3),
-                    rst.getString(4),
-                    rst.getString(5)
-            ));
-        }
-        return agent;
-    }
-
     public ArrayList<Agent> getAllAgent() throws SQLException, ClassNotFoundException {
         PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM Agent");
         ResultSet rst = stm.executeQuery();

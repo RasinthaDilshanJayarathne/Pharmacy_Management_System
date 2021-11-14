@@ -26,7 +26,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="textId" layoutX="324.0" layoutY="132.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="230.0" />
+      <TextField fx:id="textId" layoutX="324.0" layoutY="132.0" onAction="#txtSearch" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="230.0" />
       <TextField fx:id="txtAddress" layoutX="682.0" layoutY="203.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="202.0" />
       <TextField fx:id="textName" layoutX="324.0" layoutY="203.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="230.0" />
       <TextField fx:id="txtContact" layoutX="682.0" layoutY="132.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="202.0" />
