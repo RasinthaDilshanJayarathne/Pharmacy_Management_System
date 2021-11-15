@@ -34,8 +34,6 @@ public class MedicinePaheFormController {
     public TextField txtPack;
     public TextField textName;
 
-    public void Clear_On_Action(ActionEvent actionEvent) {
-    }
 
     public void Update_On_Action(ActionEvent actionEvent) {
     }
@@ -68,6 +66,10 @@ public class MedicinePaheFormController {
     }
 
     public void textFields_Key_Released(KeyEvent keyEvent) {
+
+    }
+
+    public void txtSearch(ActionEvent actionEvent) {
 
     }
 }

@@ -62,13 +62,6 @@ public class CompanyPageFormController {
 
     }
 
-    public void Clear_On_Action(ActionEvent actionEvent) {
-        textId.clear();
-        textName.clear();
-        txtAddress.clear();
-        txtContact.clear();
-    }
-
     public void clear(){
         textId.clear();
         textName.clear();

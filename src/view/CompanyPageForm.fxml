@@ -26,7 +26,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="textId" layoutX="324.0" layoutY="132.0" onAction="#txtSearch" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="230.0" />
+      <TextField fx:id="textId" layoutX="324.0" layoutY="132.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="230.0" />
       <TextField fx:id="txtAddress" layoutX="682.0" layoutY="203.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="202.0" />
       <TextField fx:id="textName" layoutX="324.0" layoutY="203.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="230.0" />
       <TextField fx:id="txtContact" layoutX="682.0" layoutY="132.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="202.0" />
@@ -60,7 +60,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnClear" layoutX="746.0" layoutY="302.0" mnemonicParsing="false" onAction="#Clear_On_Action" prefHeight="37.0" prefWidth="134.0" style="-fx-background-radius: 10;" styleClass="btn2" stylesheets="@../style/Medicine_Form.css" text="CLEAR" textFill="WHITE">
+      <Button fx:id="btnClear" layoutX="746.0" layoutY="302.0" mnemonicParsing="false" onAction="#txtSearch" prefHeight="37.0" prefWidth="134.0" style="-fx-background-radius: 10;" styleClass="btn2" stylesheets="@../style/Medicine_Form.css" text="SEARCH" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

@@ -80,14 +80,6 @@ public class AgentFormPageController {
 
     }
 
-    public void Clear_On_Action(ActionEvent actionEvent) {
-        textId.clear();
-        txtAge.clear();
-        textName.clear();
-        txtContact.clear();
-        cmbGender.getSelectionModel().clearSelection();
-    }
-
     public void clear(){
         textId.clear();
         txtAge.clear();
