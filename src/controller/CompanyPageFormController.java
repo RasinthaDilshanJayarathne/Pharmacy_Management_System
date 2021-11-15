@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -15,6 +16,7 @@ import model.Agent;
 import model.Company;
 import util.Controller.AgentController;
 import util.Controller.CompanyController;
+import util.Validation;
 import view.tm.AgentTM;
 import view.tm.CompanyTM;
 
@@ -22,7 +24,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.Optional;
+import java.util.regex.Pattern;
 
 public class CompanyPageFormController {
     public AnchorPane root;
@@ -44,6 +48,7 @@ public class CompanyPageFormController {
 
     public void initialize(){
         initTable();
+        storeValidations();
     }
 
     public void initTable(){
@@ -151,8 +156,30 @@ public class CompanyPageFormController {
         window.setScene(new Scene(load));
     }
 
-    public void textFields_Key_Released(KeyEvent keyEvent) {
+    LinkedHashMap<TextField, Pattern> map = new LinkedHashMap();
+    Pattern companyIDPattern = Pattern.compile("^(A00)[-]?[0-9]{4}$");
+    Pattern namePattern = Pattern.compile("^[A-z ]{3,20}$");
+    Pattern phoneNoPattern = Pattern.compile("^[0-9]{3}[-]?[0-9]{7}$");
+    Pattern addressPattern = Pattern.compile("^[A-z0-9/ ]{6,30}$");
 
+    private void storeValidations() {
+        map.put(textId, companyIDPattern);
+        map.put(textName, namePattern);
+        map.put(txtContact,phoneNoPattern);
+        map.put(txtAddress,addressPattern);
+    }
+
+    public void textFields_Key_Released(KeyEvent keyEvent) {
+        Object response = Validation.validate(map,btnAdd);
+
+        if (keyEvent.getCode() == KeyCode.ENTER) {
+            if (response instanceof TextField) {
+                TextField errorText = (TextField) response;
+                errorText.requestFocus();
+            } else if (response instanceof Boolean) {
+                //new Alert(Alert.AlertType.INFORMATION, "Aded").showAndWait();
+            }
+        }
     }
 
     public void txtSearch(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
