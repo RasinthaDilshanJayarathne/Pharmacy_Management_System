@@ -2,7 +2,6 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -72,7 +71,6 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <ComboBox fx:id="cmbCompany" layoutX="682.0" layoutY="257.0" prefHeight="31.0" prefWidth="188.0" />
       <AnchorPane layoutX="237.0" prefHeight="82.0" prefWidth="663.0" styleClass="loginBackground" stylesheets="@../style/Medicine_Form.css">
          <children>
             <Label alignment="CENTER" layoutX="-1.0" layoutY="19.0" prefHeight="36.0" prefWidth="663.0" text="Manage Medicine" textFill="WHITE">
@@ -113,5 +111,6 @@
             <TableColumn fx:id="colCompany" prefWidth="99.0" text="Company" />
         </columns>
       </TableView>
+      <TextField fx:id="txtCompany" layoutX="682.0" layoutY="257.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="206.0" />
    </children>
 </AnchorPane>

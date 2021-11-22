@@ -29,12 +29,12 @@ public class MedicinePaheFormController {
     public AnchorPane root;
     public DatePicker txtMadeDate;
     public DatePicker txtxExpDate;
-    public ComboBox cmbCompany;
+    /*public ComboBox cmbCompany;*/
     public Button btnAdd;
     public Button btnDelete;
     public Button btnUpdate;
     public Button btnClear;
-    public TableView tblMedicine;
+    public TableView<MedicineTM> tblMedicine;
     public TableColumn colId;
     public TableColumn colName;
     public TableColumn colPack;
@@ -46,6 +46,7 @@ public class MedicinePaheFormController {
     public TextField txtQty;
     public TextField txtPack;
     public TextField textName;
+    public TextField txtCompany;
 
     private MedicineController controller=new MedicineController();
 
@@ -75,7 +76,8 @@ public class MedicinePaheFormController {
         txtQty.clear();
         txtMadeDate.getEditor().clear();
         txtxExpDate.getEditor().clear();
-        cmbCompany.getSelectionModel().clearSelection();
+       /* cmbCompany.getSelectionModel().clearSelection();*/
+        txtCompany.clear();
     }
 
     private void setMedicineToTable(ArrayList<Medicine> allMedicine) {
@@ -91,7 +93,7 @@ public class MedicinePaheFormController {
     public void Update_On_Action(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
         btnAdd.setDisable(true);
         Medicine m1= new Medicine(
-                textId.getText(),textName.getText(),txtPack.getText(),Integer.parseInt(txtQty.getText()),txtMadeDate.getValue().toString(),txtxExpDate.getValue().toString(),cmbCompany.getValue().toString()
+                textId.getText(),textName.getText(),txtPack.getText(),Integer.parseInt(txtQty.getText()),txtMadeDate.getValue().toString(),txtxExpDate.getValue().toString(),txtCompany.getText()
         );
 
         if (controller.updateMedicine(m1)) {
@@ -126,7 +128,7 @@ public class MedicinePaheFormController {
 
     public void Add_On_Action(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
         Medicine m1= new Medicine(
-                textId.getText(),textName.getText(),txtPack.getText(),Integer.parseInt(txtQty.getText()),txtMadeDate.getValue().toString(),txtxExpDate.getValue().toString(),cmbCompany.getValue().toString()
+                textId.getText(),textName.getText(),txtPack.getText(),Integer.parseInt(txtQty.getText()),txtMadeDate.getValue().toString(),txtxExpDate.getValue().toString(),txtCompany.getText()
         );
 
         if(controller.saveMedicine(m1)) {
@@ -183,6 +185,7 @@ public class MedicinePaheFormController {
         txtQty.setText(String.valueOf(m1.getQty()));
         txtMadeDate.setValue(LocalDate.parse(m1.getMadeDate()));
         txtxExpDate.setValue(LocalDate.parse(m1.getExpDate()));
-        cmbCompany.setValue(m1.getCompany());
+       /* cmbCompany.setValue(m1.getCompany());*/
+        txtCompany.setText(m1.getCompany());
     }
 }
