@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -16,6 +17,7 @@ public class LoginPageFormController {
     public JFXTextField txtUserName;
     public JFXPasswordField textPassword;
     public AnchorPane root;
+    public Label lblError;
 
     public void Login_On_Action(ActionEvent actionEvent) throws IOException {
 
@@ -38,7 +40,7 @@ public class LoginPageFormController {
     }
 
     public void Clear_On_Action(ActionEvent actionEvent) throws IOException {
-
+        System.exit(0);
     }
 
 }
