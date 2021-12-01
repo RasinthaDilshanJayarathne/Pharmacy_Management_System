@@ -24,7 +24,7 @@ public class LoginPageFormController {
         String userName=txtUserName.getText();
         String password=textPassword.getText();
 
-        if (userName.equals("Admin") && password.equals("1234")){
+        if (userName.equals("Nimal") && password.equals("1234")){
             URL resource = getClass().getResource("../view/MedicinePaheForm.fxml");
             Parent load = FXMLLoader.load(resource);
             Stage window = (Stage) root.getScene().getWindow();
