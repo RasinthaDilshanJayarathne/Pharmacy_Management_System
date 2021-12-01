@@ -17,17 +17,28 @@ public class LoginPageFormController {
     public JFXPasswordField textPassword;
     public AnchorPane root;
 
+    public void Login_On_Action(ActionEvent actionEvent) throws IOException {
+
+        String userName=txtUserName.getText();
+        String password=textPassword.getText();
+
+        if (userName.equals("Admin") && password.equals("1234")){
+            URL resource = getClass().getResource("../view/MedicinePaheForm.fxml");
+            Parent load = FXMLLoader.load(resource);
+            Stage window = (Stage) root.getScene().getWindow();
+            window.setScene(new Scene(load));
+        }else
+            lblError.setText("Enter correct username or password");
+
+
+    }
+
     public void moveToPassword(ActionEvent actionEvent) {
         textPassword.requestFocus();
     }
 
     public void Clear_On_Action(ActionEvent actionEvent) throws IOException {
+
     }
 
-    public void Login_On_Action(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/MedicinePaheForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        Stage window = (Stage) root.getScene().getWindow();
-        window.setScene(new Scene(load));
-    }
 }
